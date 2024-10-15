@@ -1,0 +1,4 @@
+E:/Uni/Year 2/User Interfaces/Lectures/03/src/build/CMakeFiles/circdemo.dir
+E:/Uni/Year 2/User Interfaces/Lectures/03/src/build/CMakeFiles/circdemo2.dir
+E:/Uni/Year 2/User Interfaces/Lectures/03/src/build/CMakeFiles/ALL_BUILD.dir
+E:/Uni/Year 2/User Interfaces/Lectures/03/src/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "E:/Uni/Year 2/User Interfaces/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=c++11 -o CMakeFiles\\testrect.dir\\testrect.cpp.obj -c \"E:\\Uni\\Year 2\\User Interfaces\\Code\\Clas\\testrect.cpp\"",
+  "file": "E:/Uni/Year 2/User Interfaces/Code/Clas/testrect.cpp",
+  "output": "CMakeFiles/testrect.dir/testrect.cpp.obj"
+},
+{
+  "directory": "E:/Uni/Year 2/User Interfaces/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=c++11 -o CMakeFiles\\testrect.dir\\rect.cpp.obj -c \"E:\\Uni\\Year 2\\User Interfaces\\Code\\Clas\\rect.cpp\"",
+  "file": "E:/Uni/Year 2/User Interfaces/Code/Clas/rect.cpp",
+  "output": "CMakeFiles/testrect.dir/rect.cpp.obj"
+}
+]
