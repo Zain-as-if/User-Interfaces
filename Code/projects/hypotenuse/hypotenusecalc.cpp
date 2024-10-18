@@ -5,9 +5,7 @@
 using namespace std;
 
 int main() {
-    double side1; 
-    double side2;
-    double hypotenuse;
+    double side1, side2, hypotenuse;
 
     cout << "Enter Side 1: ";
     cin >> side1;
