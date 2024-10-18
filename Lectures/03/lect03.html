@@ -538,7 +538,7 @@ Nick Efford
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="8" data-code-annotation="5">Like Java, constructors have same name as class <strong>and no return type</strong></span>
+<span data-code-cell="annotated-cell-2" data-code-lines="8,9" data-code-annotation="5">Like Java, constructors have same name as class <strong>and no return type</strong></span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="6">6</dt>
 <dd>
@@ -659,7 +659,9 @@ Nick Efford
 <span id="cb5-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">// Heap allocation</span></span>
 <span id="cb5-10"><a href="" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-11"><a href="" aria-hidden="true" tabindex="-1"></a>Circle<span class="op">*</span> d <span class="op">=</span> <span class="kw">new</span> Circle<span class="op">(</span><span class="fl">1.2</span><span class="op">,</span> <span class="op">-</span><span class="fl">3.5</span><span class="op">,</span> <span class="fl">12.7</span><span class="op">);</span></span>
-<span id="cb5-12"><a href="" aria-hidden="true" tabindex="-1"></a>cout <span class="op">&lt;&lt;</span> <span class="st">"Perimeter = "</span> <span class="op">&lt;&lt;</span> d<span class="op">-&gt;</span>perimeter<span class="op">()</span> <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span></code></pre></div>
+<span id="cb5-12"><a href="" aria-hidden="true" tabindex="-1"></a>cout <span class="op">&lt;&lt;</span> <span class="st">"Perimeter = "</span> <span class="op">&lt;&lt;</span> d<span class="op">-&gt;</span>perimeter<span class="op">()</span> <span class="op">&lt;&lt;</span> endl<span class="op">;</span></span>
+<span id="cb5-13"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span>
+<span id="cb5-14"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">delete</span> d<span class="op">;</span>  <span class="co">// when d no longer needed</span></span></code></pre></div>
 </section>
 <section id="compiling" class="slide level2">
 <h2>Compiling</h2>
@@ -690,13 +692,13 @@ Nick Efford
 <div class="code-with-filename-file">
 <pre><strong>CMakeLists.txt</strong></pre>
 </div>
-<div class="sourceCode" id="cb7" data-filename="CMakeLists.txt"><pre class="sourceCode numberSource cmake number-lines"><code class="sourceCode cmake"><span id="cb7-1"><a href=""></a><span class="kw">cmake_minimum_required</span>(<span class="ot">VERSION</span> <span class="dt">3.6</span>)</span>
-<span id="cb7-2"><a href=""></a><span class="kw">project</span>(circles <span class="ot">LANGUAGES</span> <span class="ot">CXX</span>)</span>
+<div class="sourceCode" id="cb7" data-filename="CMakeLists.txt"><pre class="sourceCode numberSource cmake number-lines"><code class="sourceCode cmake"><span id="cb7-1"><a href=""></a><span class="kw">cmake_minimum_required</span>(<span class="ot">VERSION</span> <span class="dt">3.16</span>)</span>
+<span id="cb7-2"><a href=""></a><span class="kw">project</span>(circles <span class="ot">VERSION</span> <span class="dt">1.0</span> <span class="ot">LANGUAGES</span> <span class="ot">CXX</span>)</span>
 <span id="cb7-3"><a href=""></a></span>
 <span id="cb7-4"><a href=""></a><span class="kw">set</span>(SOURCE_FILES</span>
-<span id="cb7-5"><a href=""></a>        circle.hpp</span>
-<span id="cb7-6"><a href=""></a>        circle.cpp</span>
-<span id="cb7-7"><a href=""></a>        circdemo.cpp)</span>
+<span id="cb7-5"><a href=""></a>    circledemo.cpp</span>
+<span id="cb7-6"><a href=""></a>    circle.cpp</span>
+<span id="cb7-7"><a href=""></a>)</span>
 <span id="cb7-8"><a href=""></a></span>
 <span id="cb7-9"><a href=""></a><span class="kw">add_executable</span>(<span class="bn">circdemo</span> <span class="dv">${SOURCE_FILES}</span>)</span></code></pre></div>
 </div>
@@ -724,9 +726,9 @@ Nick Efford
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg aria-roledescription="classDiagram" role="graphics-document document" viewbox="0 0 380.625 356" style="; display: block; margin: auto auto auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="960" id="mermaid-figure-1" height="480">
+<svg aria-roledescription="classDiagram" role="graphics-document document" viewbox="0 0 387.234375 366" style="; display: block; margin: auto auto auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="960" id="mermaid-figure-1" height="480">
 <style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-figure-1 .error-icon{fill:#552222;}#mermaid-figure-1 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-1 .marker.cross{stroke:#333333;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 g.classGroup text{fill:#9370DB;fill:#131300;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#mermaid-figure-1 g.classGroup text .title{font-weight:bolder;}#mermaid-figure-1 .nodeLabel,#mermaid-figure-1 .edgeLabel{color:#131300;}#mermaid-figure-1 .edgeLabel .label rect{fill:#ECECFF;}#mermaid-figure-1 .label text{fill:#131300;}#mermaid-figure-1 .edgeLabel .label span{background:#ECECFF;}#mermaid-figure-1 .classTitle{font-weight:bolder;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-1 .divider{stroke:#9370DB;stroke-width:1;}#mermaid-figure-1 g.clickable{cursor:pointer;}#mermaid-figure-1 g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#mermaid-figure-1 g.classGroup line{stroke:#9370DB;stroke-width:1;}#mermaid-figure-1 .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#mermaid-figure-1 .classLabel .label{fill:#9370DB;font-size:10px;}#mermaid-figure-1 .relation{stroke:#333333;stroke-width:1;fill:none;}#mermaid-figure-1 .dashed-line{stroke-dasharray:3;}#mermaid-figure-1 .dotted-line{stroke-dasharray:1 2;}#mermaid-figure-1 #compositionStart,#mermaid-figure-1 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #compositionEnd,#mermaid-figure-1 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #dependencyStart,#mermaid-figure-1 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #dependencyStart,#mermaid-figure-1 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #extensionStart,#mermaid-figure-1 .extension{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #extensionEnd,#mermaid-figure-1 .extension{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #aggregationStart,#mermaid-figure-1 .aggregation{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #aggregationEnd,#mermaid-figure-1 .aggregation{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #lollipopStart,#mermaid-figure-1 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 #lollipopEnd,#mermaid-figure-1 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-figure-1 .edgeTerminals{font-size:11px;}#mermaid-figure-1 .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker aggregation classDiagram" id="mermaid-figure-1-classDiagram-aggregationStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="28" markerwidth="20" refy="7" refx="19" class="marker aggregation classDiagram" id="mermaid-figure-1-classDiagram-aggregationEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker extension classDiagram" id="mermaid-figure-1-classDiagram-extensionStart"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="28" markerwidth="20" refy="7" refx="19" class="marker extension classDiagram" id="mermaid-figure-1-classDiagram-extensionEnd"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker composition classDiagram" id="mermaid-figure-1-classDiagram-compositionStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="28" markerwidth="20" refy="7" refx="19" class="marker composition classDiagram" id="mermaid-figure-1-classDiagram-compositionEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker dependency classDiagram" id="mermaid-figure-1-classDiagram-dependencyStart"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="28" markerwidth="20" refy="7" refx="19" class="marker dependency classDiagram" id="mermaid-figure-1-classDiagram-dependencyEnd"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker lollipop classDiagram" id="mermaid-figure-1-classDiagram-lollipopStart"><circle r="6" cy="7" cx="6" fill="white" stroke="black"></circle></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-start="url(#mermaid-figure-1-classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id1" d="M129.4453125,138.58995327102804L122.46223958333333,145.15829439252335C115.47916666666667,151.72663551401868,101.51302083333333,164.86331775700936,94.52994791666667,179.264992211838C87.546875,193.66666666666666,87.546875,209.33333333333334,87.546875,217.16666666666666L87.546875,225"></path><path marker-start="url(#mermaid-figure-1-classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id2" d="M252.9609375,138.58995327102804L259.9440104166667,145.15829439252335C266.9270833333333,151.72663551401868,280.8932291666667,164.86331775700936,287.8763020833333,175.59832554517132C294.859375,186.33333333333334,294.859375,194.66666666666666,294.859375,198.83333333333334L294.859375,203"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
+<g><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker aggregation classDiagram" id="mermaid-figure-1-classDiagram-aggregationStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="28" markerwidth="20" refy="7" refx="19" class="marker aggregation classDiagram" id="mermaid-figure-1-classDiagram-aggregationEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker extension classDiagram" id="mermaid-figure-1-classDiagram-extensionStart"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="28" markerwidth="20" refy="7" refx="19" class="marker extension classDiagram" id="mermaid-figure-1-classDiagram-extensionEnd"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker composition classDiagram" id="mermaid-figure-1-classDiagram-compositionStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="28" markerwidth="20" refy="7" refx="19" class="marker composition classDiagram" id="mermaid-figure-1-classDiagram-compositionEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker dependency classDiagram" id="mermaid-figure-1-classDiagram-dependencyStart"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="28" markerwidth="20" refy="7" refx="19" class="marker dependency classDiagram" id="mermaid-figure-1-classDiagram-dependencyEnd"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerheight="240" markerwidth="190" refy="7" refx="0" class="marker lollipop classDiagram" id="mermaid-figure-1-classDiagram-lollipopStart"><circle r="6" cy="7" cx="6" fill="white" stroke="black"></circle></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-start="url(#mermaid-figure-1-classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id1" d="M129.58203125,143.69958084498683L122.68424479166667,150.2496507041557C115.78645833333333,156.79972056332454,101.99088541666667,169.89986028166228,95.09309895833333,184.44993014083116C88.1953125,199,88.1953125,215,88.1953125,223L88.1953125,231"></path><path marker-start="url(#mermaid-figure-1-classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id2" d="M257.42578125,143.69958084498683L264.3235677083333,150.2496507041557C271.2213541666667,156.79972056332454,285.0169270833333,169.89986028166228,291.9147135416667,180.6165968074978C298.8125,191.33333333333334,298.8125,199.66666666666666,298.8125,203.83333333333334L298.8125,208"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignobject height="0" width="0">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
@@ -734,67 +736,67 @@ Nick Efford
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel"></span>
 </div>
-</foreignobject></g></g></g><g class="nodes"><g transform="translate(191.203125, 80.5)" id="classId-Shape-0" class="node default"><rect height="145" width="123.515625" y="-72.5" x="-61.7578125" class="outer title-state"></rect><line y2="-42.5" y1="-42.5" x2="61.7578125" x1="-61.7578125" class="divider"></line><line y2="17.5" y1="17.5" x2="61.7578125" x1="-61.7578125" class="divider"></line><g class="label"><foreignobject height="0" width="0">
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(193.50390625, 83)" id="classId-Shape-0" class="node default"><rect height="150" width="127.84375" y="-75" x="-63.921875" class="outer title-state"></rect><line y2="-44" y1="-44" x2="63.921875" x1="-63.921875" class="divider"></line><line y2="18" y1="18" x2="63.921875" x1="-63.921875" class="divider"></line><g class="label"><foreignobject height="0" width="0">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel"></span>
 </div>
-</foreignobject><foreignobject transform="translate( -24.0078125, -65)" height="18" width="48.015625" class="classTitle">
+</foreignobject><foreignobject transform="translate( -22.3515625, -67.5)" height="19" width="44.703125" class="classTitle">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">Shape</span>
 </div>
-</foreignobject><foreignobject transform="translate( -54.2578125, -31)" height="18" width="108.515625">
+</foreignobject><foreignobject transform="translate( -56.421875, -32.5)" height="19" width="112.84375">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">xorigin : double</span>
 </div>
-</foreignobject><foreignobject transform="translate( -54.2578125, -9)" height="18" width="108.515625">
+</foreignobject><foreignobject transform="translate( -56.421875, -9.5)" height="19" width="112.71875">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">yorigin : double</span>
 </div>
-</foreignobject><foreignobject transform="translate( -54.2578125, 25)" height="18" width="104.953125">
+</foreignobject><foreignobject transform="translate( -56.421875, 25.5)" height="19" width="107.875">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">getX() : double</span>
 </div>
-</foreignobject><foreignobject transform="translate( -54.2578125, 47)" height="18" width="104.953125">
+</foreignobject><foreignobject transform="translate( -56.421875, 48.5)" height="19" width="108.09375">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">getY() : double</span>
 </div>
-</foreignobject></g></g><g transform="translate(87.546875, 275.5)" id="classId-Circle-1" class="node default"><rect height="101" width="159.09375" y="-50.5" x="-79.546875" class="outer title-state"></rect><line y2="-20.5" y1="-20.5" x2="79.546875" x1="-79.546875" class="divider"></line><line y2="17.5" y1="17.5" x2="79.546875" x1="-79.546875" class="divider"></line><g class="label"><foreignobject height="0" width="0">
+</foreignobject></g></g><g transform="translate(88.1953125, 283)" id="classId-Circle-1" class="node default"><rect height="104" width="160.390625" y="-52" x="-80.1953125" class="outer title-state"></rect><line y2="-21" y1="-21" x2="80.1953125" x1="-80.1953125" class="divider"></line><line y2="18" y1="18" x2="80.1953125" x1="-80.1953125" class="divider"></line><g class="label"><foreignobject height="0" width="0">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel"></span>
 </div>
-</foreignobject><foreignobject transform="translate( -22.234375, -43)" height="18" width="44.46875" class="classTitle">
+</foreignobject><foreignobject transform="translate( -21.75, -44.5)" height="19" width="43.5" class="classTitle">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">Circle</span>
 </div>
-</foreignobject><foreignobject transform="translate( -72.046875, -9)" height="18" width="104.96875">
+</foreignobject><foreignobject transform="translate( -72.6953125, -9.5)" height="19" width="107.4375">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">radius : double</span>
 </div>
-</foreignobject><foreignobject transform="translate( -72.046875, 25)" height="18" width="144.09375">
+</foreignobject><foreignobject transform="translate( -72.6953125, 25.5)" height="19" width="145.390625">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">getRadius() : double</span>
 </div>
-</foreignobject></g></g><g transform="translate(294.859375, 275.5)" id="classId-Rectangle-2" class="node default"><rect height="145" width="155.53125" y="-72.5" x="-77.765625" class="outer title-state"></rect><line y2="-42.5" y1="-42.5" x2="77.765625" x1="-77.765625" class="divider"></line><line y2="17.5" y1="17.5" x2="77.765625" x1="-77.765625" class="divider"></line><g class="label"><foreignobject height="0" width="0">
+</foreignobject></g></g><g transform="translate(298.8125, 283)" id="classId-Rectangle-2" class="node default"><rect height="150" width="160.84375" y="-75" x="-80.421875" class="outer title-state"></rect><line y2="-44" y1="-44" x2="80.421875" x1="-80.421875" class="divider"></line><line y2="18" y1="18" x2="80.421875" x1="-80.421875" class="divider"></line><g class="label"><foreignobject height="0" width="0">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel"></span>
 </div>
-</foreignobject><foreignobject transform="translate( -38.234375, -65)" height="18" width="76.46875" class="classTitle">
+</foreignobject><foreignobject transform="translate( -36.7109375, -67.5)" height="19" width="73.421875" class="classTitle">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">Rectangle</span>
 </div>
-</foreignobject><foreignobject transform="translate( -70.265625, -31)" height="18" width="98.734375">
+</foreignobject><foreignobject transform="translate( -72.921875, -32.5)" height="19" width="104.59375">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">width : double</span>
 </div>
-</foreignobject><foreignobject transform="translate( -70.265625, -9)" height="18" width="104.984375">
+</foreignobject><foreignobject transform="translate( -72.921875, -9.5)" height="19" width="109.265625">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">height : double</span>
 </div>
-</foreignobject><foreignobject transform="translate( -70.265625, 25)" height="18" width="135.1875">
+</foreignobject><foreignobject transform="translate( -72.921875, 25.5)" height="19" width="140.953125">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">getWidth() : double</span>
 </div>
-</foreignobject><foreignobject transform="translate( -70.265625, 47)" height="18" width="140.53125">
+</foreignobject><foreignobject transform="translate( -72.921875, 48.5)" height="19" width="145.84375">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="nodeLabel">getHeight() : double</span>
 </div>
@@ -895,7 +897,7 @@ Nick Efford
 </dd>
 <dt data-target-cell="annotated-cell-12" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-12" data-code-lines="14" data-code-annotation="2"><code>xorigin</code> private so <code>getX()</code> is required here</span>
+<span data-code-cell="annotated-cell-12" data-code-lines="14,15" data-code-annotation="2"><code>xorigin</code> &amp; <code>yorigin</code> private so getters are required here</span>
 </dd>
 </dl>
 </section>
@@ -966,7 +968,7 @@ Nick Efford
 </dd>
 <dt data-target-cell="annotated-cell-15" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-15" data-code-lines="7" data-code-annotation="3">Dynamic binding occurs here, invoking the appropriate <code>draw()</code> on whichever type of object the pointer is referencing</span>
+<span data-code-cell="annotated-cell-15" data-code-lines="7" data-code-annotation="3">Dynamic binding occurs here, invoking the appropriate <code>draw()</code> on whichever type of objext is being referenced</span>
 </dd>
 </dl>
 <div title="Polymorphism">
@@ -979,7 +981,7 @@ Nick Efford
 <p><strong>Polymorphism</strong></p>
 </div>
 <div class="callout-content">
-<p>Loop on lines 6–8 is an example of <strong>polymorphic code</strong>; it will work with any type of shape, including classes that haven’t yet been created</p>
+<p>Loop on lines 6–8 is an example of <strong>polymorphic code</strong>; it will work with any type of shape, including subclasses that haven’t yet been created</p>
 </div>
 </div>
 </div>
@@ -1000,6 +1002,7 @@ Nick Efford
 <section id="follow-up-further-reading" class="slide level2">
 <h2>Follow-up / Further Reading</h2>
 <ul>
+<li><p><a href="https://python33r.github.io/comp2811-exercises/">COMP2811 Exercises</a></p></li>
 <li><p><a href="https://www.cplusplus.com/doc/tutorial/">C++ language tutorial</a> at cplusplus.com</p></li>
 <li><p><a href="https://en.cppreference.com/w/cpp">C++ Reference</a> at cppreference.com</p></li>
 <li><p><a href="https://youtu.be/Rub-JsjMhWY">~70min YouTube video</a> introducing C++ programming</p></li>

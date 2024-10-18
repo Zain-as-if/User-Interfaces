@@ -12,6 +12,6 @@ Circle::Circle(double x, double y, double r):
 bool Circle::containsPoint(double x, double y) const
 {
   double dx = x - getX();  // <2>
-  double dy = y - getY();
+  double dy = y - getY();  // <2>
   return sqrt(dx*dx + dy*dy) <= radius;
 }

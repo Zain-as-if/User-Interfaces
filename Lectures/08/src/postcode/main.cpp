@@ -1,4 +1,4 @@
-// Test program for PostcodeInpu widget
+// Test program for PostcodeInput widget
 
 #include "postcode.hpp"
 

@@ -425,7 +425,10 @@ Nick Efford
 <li>Note: you don’t call this directly yourself!</li>
 </ul></li>
 <li><p>Compiler can synthesize default versions of these that will suffice in many situations</p></li>
-<li><p>… but if your class allocates its own storage then you will need to provide your own implementations</p></li>
+<li><p>… but if your class allocates its own storage then you will need to provide your own implementations</p>
+<ul>
+<li>Copy constructor, destructor &amp; assignment operator</li>
+</ul></li>
 </ul>
 </section>
 <section id="operator-overloading" class="slide level2">
@@ -436,7 +439,7 @@ Nick Efford
 <li>This isn’t possible in Java!</li>
 </ul></li>
 <li><p>Overloading can also be done for the stream insertion (<code>&lt;&lt;</code>) &amp; extraction (<code>&gt;&gt;</code>) operators – allowing us to do I/O in a consistent way across all data types</p></li>
-<li><p>Operator overloading should be done sparingly; if overused, it can make code harder to read</p></li>
+<li><p><strong>Operator overloading should be done sparingly</strong>; if overused, it can make code harder to read!</p></li>
 </ul>
 </section>
 <section id="example" class="slide level2">
@@ -473,7 +476,7 @@ Nick Efford
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="11" data-code-annotation="4">Array indexing operator, overloaded to provide both read access and write access</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="11,12" data-code-annotation="4">Array indexing operator, overloaded to provide both read access and write access</span>
 </dd>
 </dl>
 </section>
@@ -499,11 +502,11 @@ Nick Efford
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="1" data-code-annotation="1">Remember: C++ prefers that we initialize fields via the initializer list</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="1" data-code-annotation="1">Remember: in C++ we prefer to use an <strong>initializer list</strong> for field initialization where possible</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="3" data-code-annotation="2">Good idea to check that requested array size is sensible, and throw an exception if it isn’t</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="3,4,5" data-code-annotation="2">Good idea to check that requested array size is sensible, and throw an exception if it isn’t</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
 <dd>
@@ -511,7 +514,7 @@ Nick Efford
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="14" data-code-annotation="4">Use a loop to copy values from the other array, one-by-one (or could use <code>copy</code> algorithm to do it in one line)</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="14,15,16" data-code-annotation="4">Use a loop to copy values from the other array, one-by-one (or could use <code>copy</code> algorithm to do it in one line)</span>
 </dd>
 </dl>
 </section>
@@ -551,12 +554,12 @@ Nick Efford
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2">2</button><span id="annotated-cell-4-8" class="code-annotation-target"><a href="#annotated-cell-4-8"></a>  a<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="fl">0.5</span><span class="bu">f</span><span class="op">;</span></span>
 <span id="annotated-cell-4-9"><a href="#annotated-cell-4-9"></a></span>
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="3">3</button><span id="annotated-cell-4-10" class="code-annotation-target"><a href="#annotated-cell-4-10"></a>  Array c<span class="op">(</span>a<span class="op">);</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="4">4</button><span id="annotated-cell-4-11" class="code-annotation-target"><a href="#annotated-cell-4-11"></a>  Array d <span class="op">=</span> a<span class="op">;</span></span>
+<span id="annotated-cell-4-11"><a href="#annotated-cell-4-11"></a>  Array d <span class="op">=</span> a<span class="op">;</span></span>
 <span id="annotated-cell-4-12"><a href="#annotated-cell-4-12"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="5">5</button><span id="annotated-cell-4-13" class="code-annotation-target"><a href="#annotated-cell-4-13"></a>  a <span class="op">=</span> b<span class="op">;</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="4">4</button><span id="annotated-cell-4-13" class="code-annotation-target"><a href="#annotated-cell-4-13"></a>  a <span class="op">=</span> b<span class="op">;</span></span>
 <span id="annotated-cell-4-14"><a href="#annotated-cell-4-14"></a></span>
 <span id="annotated-cell-4-15"><a href="#annotated-cell-4-15"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="6">6</button><span id="annotated-cell-4-16" class="code-annotation-target"><a href="#annotated-cell-4-16"></a><span class="op">}</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="5">5</button><span id="annotated-cell-4-16" class="code-annotation-target"><a href="#annotated-cell-4-16"></a><span class="op">}</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
@@ -568,19 +571,15 @@ Nick Efford
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="10" data-code-annotation="3">Invokes copy constructor</span>
+<span data-code-cell="annotated-cell-4" data-code-lines="10,11" data-code-annotation="3"><em>Both</em> of these lines invoke the copy constructor!</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="11" data-code-annotation="4">Also invokes copy constructor!</span>
+<span data-code-cell="annotated-cell-4" data-code-lines="13" data-code-annotation="4">Invokes overloaded assignment operator</span>
 </dd>
 <dt data-target-cell="annotated-cell-4" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="13" data-code-annotation="5">Invokes overloaded <code>=</code> operator</span>
-</dd>
-<dt data-target-cell="annotated-cell-4" data-target-annotation="6">6</dt>
-<dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="16" data-code-annotation="6">Destructors will be invoked automatically when objects go out of scope</span>
+<span data-code-cell="annotated-cell-4" data-code-lines="16" data-code-annotation="5">Destructors will be invoked automatically when objects go out of scope</span>
 </dd>
 </dl>
 </section>
@@ -666,11 +665,11 @@ Nick Efford
 </dd>
 <dt data-target-cell="annotated-cell-5" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-5" data-code-lines="8" data-code-annotation="4">Normally would invoke <code>show()</code> on a top-level container widget, but any Qt widget can act as a top-level window</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="8" data-code-annotation="4">Normally we would invoke <code>show()</code> on a top-level container widget, but any Qt widget can act as a top-level window</span>
 </dd>
 <dt data-target-cell="annotated-cell-5" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-cell="annotated-cell-5" data-code-lines="10" data-code-annotation="5"><code>main()</code> should end with call to the <code>exec()</code> method of <code>QApplication</code>, to start main event loop</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="10" data-code-annotation="5"><code>main()</code> should end with call to the <code>exec()</code> method of <code>QApplication</code>, to start the main/event loop</span>
 </dd>
 </dl>
 </section>
@@ -849,7 +848,7 @@ Nick Efford
 <ol type="1">
 <li><p>Edit <code>~/.bashrc</code> in your preferred text editor</p></li>
 <li><p>Add the following line, then save &amp; quit</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource shell number-lines"><code class="sourceCode"><span id="cb11-1"><a href=""></a>PATH=$PATH:/usr/lib64/qt6/bin</span></code></pre></div></li>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource shell number-lines"><code class="sourceCode"><span id="cb11-1"><a href=""></a>PATH=/usr/lib64/qt6/bin:$PATH</span></code></pre></div></li>
 <li><p>Start a new terminal window; you should be able to run CMake or the Qt tools from there</p></li>
 </ol>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -867,9 +866,24 @@ Nick Efford
 </div>
 </div>
 </section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<div style="height: 0.1em"></div>
+<p>We have</p>
+<ul>
+<li><p>Seen that classes may need to be given a copy constructor, overloaded assignment operator and destructor</p>
+<ul>
+<li>e.g., if instances allocate memory</li>
+</ul></li>
+<li><p>Looked at an example of overloading the <code>[]</code> operator</p></li>
+<li><p>Introduced Qt, a framework for building GUIs</p></li>
+<li><p>Demonstrated a very simple “Hello World!” Qt application</p></li>
+</ul>
+</section>
 <section id="follow-up-further-reading" class="slide level2">
 <h2>Follow-up / Further Reading</h2>
 <ul>
+<li><p><a href="https://python33r.github.io/comp2811-exercises/">COMP2811 Exercises</a></p></li>
 <li><p><a href="https://www.cplusplus.com/doc/tutorial/">C++ language tutorial</a> at cplusplus.com</p></li>
 <li><p><a href="https://isocpp.org/wiki/faq">C++ Super-FAQ</a> at isocpp.org</p></li>
 <li><p>Lippman, Lajoie &amp; Moo (2012) <a href="https://amzn.to/2Hvxeq9"><em>C++ Primer</em></a> (5th ed.)</p></li>

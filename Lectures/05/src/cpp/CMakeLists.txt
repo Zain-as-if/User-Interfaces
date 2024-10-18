@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.16)
 project(lect05 VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(arraytest arraytest.cpp array.hpp array.cpp)
+add_executable(arraytest arraytest.cpp array.cpp)
