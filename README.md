@@ -7,4 +7,4 @@ Using C++ Youtube Tutorial Covered:
 - Learnt Ternary Operator (? Replaces If) 
 - Created Temp Converter (C, F, K)
 - String Methods ( length(), empty(), clear(), append(), at(), insert(), find(), erase() )
-- test
+- While & Do
