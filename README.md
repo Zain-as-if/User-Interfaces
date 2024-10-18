@@ -1,2 +1,5 @@
 COMP2811 - User Interfaces  
-Test Using GitHub Desktop
+Using C++ Youtube Tutorial Covered: 
+- Basic Commmands (Output, Input, Variables, Data Types)
+- Namespaces (typedef, using)
+- Created Hypotenuse Calculator
