@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/workspaces/User-Interfaces/build",
+  "command": "/usr/bin/g++    -g   -std=c++17 -o CMakeFiles/test_quake.dir/test_quake.cpp.o -c /workspaces/User-Interfaces/cwk1/test_quake.cpp",
+  "file": "/workspaces/User-Interfaces/cwk1/test_quake.cpp"
+},
+{
+  "directory": "/workspaces/User-Interfaces/build",
+  "command": "/usr/bin/g++    -g   -std=c++17 -o CMakeFiles/test_quake.dir/quake.cpp.o -c /workspaces/User-Interfaces/cwk1/quake.cpp",
+  "file": "/workspaces/User-Interfaces/cwk1/quake.cpp"
+},
+{
+  "directory": "/workspaces/User-Interfaces/build",
+  "command": "/usr/bin/g++    -g   -std=c++17 -o CMakeFiles/test_dataset.dir/test_dataset.cpp.o -c /workspaces/User-Interfaces/cwk1/test_dataset.cpp",
+  "file": "/workspaces/User-Interfaces/cwk1/test_dataset.cpp"
+},
+{
+  "directory": "/workspaces/User-Interfaces/build",
+  "command": "/usr/bin/g++    -g   -std=c++17 -o CMakeFiles/test_dataset.dir/quake.cpp.o -c /workspaces/User-Interfaces/cwk1/quake.cpp",
+  "file": "/workspaces/User-Interfaces/cwk1/quake.cpp"
+},
+{
+  "directory": "/workspaces/User-Interfaces/build",
+  "command": "/usr/bin/g++    -g   -std=c++17 -o CMakeFiles/test_dataset.dir/dataset.cpp.o -c /workspaces/User-Interfaces/cwk1/dataset.cpp",
+  "file": "/workspaces/User-Interfaces/cwk1/dataset.cpp"
+},
+{
+  "directory": "/workspaces/User-Interfaces/build",
+  "command": "/usr/bin/g++    -g   -std=c++17 -o CMakeFiles/quaketool.dir/main.cpp.o -c /workspaces/User-Interfaces/cwk1/main.cpp",
+  "file": "/workspaces/User-Interfaces/cwk1/main.cpp"
+},
+{
+  "directory": "/workspaces/User-Interfaces/build",
+  "command": "/usr/bin/g++    -g   -std=c++17 -o CMakeFiles/quaketool.dir/quake.cpp.o -c /workspaces/User-Interfaces/cwk1/quake.cpp",
+  "file": "/workspaces/User-Interfaces/cwk1/quake.cpp"
+},
+{
+  "directory": "/workspaces/User-Interfaces/build",
+  "command": "/usr/bin/g++    -g   -std=c++17 -o CMakeFiles/quaketool.dir/dataset.cpp.o -c /workspaces/User-Interfaces/cwk1/dataset.cpp",
+  "file": "/workspaces/User-Interfaces/cwk1/dataset.cpp"
+}
+]

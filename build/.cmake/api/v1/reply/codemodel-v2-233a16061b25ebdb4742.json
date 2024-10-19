@@ -1,0 +1,77 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "quaketool",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "quaketool::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-quaketool-Debug-814b88b60c6bbec76e35.json",
+					"name" : "quaketool",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_dataset::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_dataset-Debug-e24c13a09b0acea2fbae.json",
+					"name" : "test_dataset",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_quake::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_quake-Debug-efc5a88e399dce94e7f4.json",
+					"name" : "test_quake",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspaces/User-Interfaces/build",
+		"source" : "/workspaces/User-Interfaces/cwk1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
