@@ -1,0 +1,5 @@
+/home/zain/Uni/comp2811ui/Exercises/programwidgetlayout/hbox/build/CMakeFiles/hbox.dir
+/home/zain/Uni/comp2811ui/Exercises/programwidgetlayout/hbox/build/CMakeFiles/edit_cache.dir
+/home/zain/Uni/comp2811ui/Exercises/programwidgetlayout/hbox/build/CMakeFiles/rebuild_cache.dir
+/home/zain/Uni/comp2811ui/Exercises/programwidgetlayout/hbox/build/CMakeFiles/hbox_autogen_timestamp_deps.dir
+/home/zain/Uni/comp2811ui/Exercises/programwidgetlayout/hbox/build/CMakeFiles/hbox_autogen.dir

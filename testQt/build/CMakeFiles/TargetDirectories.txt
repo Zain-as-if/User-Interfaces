@@ -1,0 +1,5 @@
+/home/zain/Uni/comp2811ui/testQt/build/CMakeFiles/hello.dir
+/home/zain/Uni/comp2811ui/testQt/build/CMakeFiles/edit_cache.dir
+/home/zain/Uni/comp2811ui/testQt/build/CMakeFiles/rebuild_cache.dir
+/home/zain/Uni/comp2811ui/testQt/build/CMakeFiles/hello_autogen_timestamp_deps.dir
+/home/zain/Uni/comp2811ui/testQt/build/CMakeFiles/hello_autogen.dir

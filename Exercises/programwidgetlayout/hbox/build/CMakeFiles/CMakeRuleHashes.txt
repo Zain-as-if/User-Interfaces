@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+00e2a746cb90da0ae88cf13baa462b58 CMakeFiles/hbox_autogen
+00e2a746cb90da0ae88cf13baa462b58 CMakeFiles/hbox_autogen_timestamp_deps
+8943bbba76faee797a931893bef153b6 hbox_autogen/timestamp

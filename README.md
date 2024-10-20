@@ -19,3 +19,13 @@ To Do:
 - Memory
 - Pointers
 - Classes & Structs
+
+Got Qt To Work On Mint VM (FINALLY)
+Done:
+- Getting Started
+- Experimenting W/ QHBoxLayout
+
+To Do:
+- Using QFormLayout
+- Using QGridLayout
+- Coursework
