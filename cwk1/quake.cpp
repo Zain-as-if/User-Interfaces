@@ -5,11 +5,22 @@
 
 using namespace std;
 
-
+// Constructor
 Quake::Quake(const string& tm, double lat, double lon, double dep, double mag):
   time(tm), latitude(lat), longitude(lon), depth(dep), magnitude(mag)
 {
-  // Add validation code here
+  if (latitude > MAX_LATITUDE || latitude < MIN_LATITUDE){
+    throw out_of_range("Latitude Is Outside Of Allowed Range");
+  }
+  else if (longitude > MAX_LONGITUDE || longitude < MIN_LONGITUDE) {
+    throw out_of_range("Longitude Is Outside Of Allowed Range");
+  }
+  else if (depth < 0) {
+    throw invalid_argument("Depth Can Not Be Negative");
+  }
+  else if (magnitude < 0) {
+    throw invalid_argument("Magnitude Can Not Be Negative");
+  }
 }
 
 

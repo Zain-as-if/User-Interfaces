@@ -1,0 +1,5 @@
+/home/zain/Uni/comp2811ui/cwk1/build/CMakeFiles/quaketool.dir
+/home/zain/Uni/comp2811ui/cwk1/build/CMakeFiles/test_dataset.dir
+/home/zain/Uni/comp2811ui/cwk1/build/CMakeFiles/test_quake.dir
+/home/zain/Uni/comp2811ui/cwk1/build/CMakeFiles/edit_cache.dir
+/home/zain/Uni/comp2811ui/cwk1/build/CMakeFiles/rebuild_cache.dir

@@ -5,6 +5,11 @@
 #include <vector>
 #include "quake.hpp"
 
+/*
+- time, lat, long, depth, mag PRIVATE ( In quake.hpp )
++ Quake, getTime, getLatitude, getLongitude, getDepth, getMagnitude PUBLIC
+*/
+
 class QuakeDataset
 {
   public:
