@@ -28,4 +28,8 @@ Done:
 To Do:
 - Using QFormLayout
 - Using QGridLayout
-- Coursework
+
+Coursework:
+- DONE Task 3: Validation Of Lat, Lon, Dep, Mag
+- NEED TO Task 4.1: Write Class Definition, Learn Inlined & Overloaded Constructors
+- START Task 4.2-.3 & 5 
