@@ -19,6 +19,9 @@ To Do:
 - Memory
 - Pointers
 - Classes & Structs
+- Constructors / Getters / Setters
+- Enums
+- Inheritance
 
 Got Qt To Work On Mint VM (FINALLY)
 Done:
@@ -31,5 +34,5 @@ To Do:
 
 Coursework:
 - DONE Task 3: Validation Of Lat, Lon, Dep, Mag
-- NEED TO Task 4.1: Write Class Definition, Learn Inlined & Overloaded Constructors
-- START Task 4.2-.3 & 5 
+- DONE Task 4: Write Methods/Constructors, File Input, Exception Handling 
+- START Task 5 
